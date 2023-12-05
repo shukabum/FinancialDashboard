@@ -1,3 +1,6 @@
+
+# This how the final dashboard looks
+<img src="https://github.com/shukabum/FinancialDashboard/assets/109593681/f3cee689-dd8a-4b5a-8296-aca7492d5b95"/>
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
