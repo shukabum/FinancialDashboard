@@ -25,7 +25,6 @@ label {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 .accountstats {
   height: 15%;
@@ -189,19 +188,16 @@ label {
   /* background: darkgray; */
   cursor: pointer;
 }
-.infos{
+.infos {
   display: flex;
   /* justify-content: space-evenly; */
   align-items: center;
-  gap:1rem;
-  
+  gap: 1rem;
 }
-.infos>label{
+.infos > label {
   font-size: 1.5rem;
   color: #a668a6;
 }
-
-
 
 /* modal */
 .modal_overlay {
@@ -213,18 +209,26 @@ label {
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
-  align-items: center;z-index: 99999;
+  align-items: center;
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .modal_content {
-    display: flex;
-    flex-direction: column;
-    gap:2rem;
-    background: #af8dd9ff;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: #af8dd9ff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .modal_close {
@@ -232,33 +236,41 @@ label {
   /* top: 10px; */
   /* right: 10px; */
   cursor: pointer;
-  border:none;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   background: none;
   font-weight: 900;
   padding: 1rem;
   border-radius: 1rem;
 }
+.modal_overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
 
+.modal_content.active {
+  opacity: 1;
+  transform: scale(1);
+}
 .modal_close:hover {
- background: #d1d2d4;
-  }
-.modal_btn{
+  background: #d1d2d4;
+}
+.modal_btn {
   /* position:absolute; */
   /* display: flex;/ */
   float: right;
-  width:fit-content;
+  width: fit-content;
   padding: 0.5rem;
   background: transparent;
   border: none;
   font-size: 1.3rem;
   border-radius: 1rem;
 }
-.modal_btn:hover{
+.modal_btn:hover {
   cursor: pointer;
   background-color: rgb(248, 215, 215);
 }
-
 
 @media screen and (max-width: 980px) {
   .container {

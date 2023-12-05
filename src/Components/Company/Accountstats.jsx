@@ -2,10 +2,12 @@ import React from "react";
 import classes from "../../Styles/company.module.css";
 
 const Modal = ({ isOpen, onClose, children }) => {
+  const modalClasses = [classes.modal_overlay, isOpen ? classes.active : ''].join(' ');
+  const contentClasses = [classes.modal_content, isOpen ? classes.active : ''].join(' ');
   if (!isOpen) return null;
   return (
-    <div className={classes.modal_overlay}>
-      <div className={classes.modal_content}>
+    <div className={modalClasses}>
+      <div className={contentClasses}>
         <span
           style={{
             display:'flex',
